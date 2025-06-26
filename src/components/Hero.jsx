@@ -43,7 +43,8 @@ const Hero = () => {
 			.to(".left-leaf", { y: -400 }, 0);
 
 		const startValue = isMobile ? "top 50%" : "center 60%";
-		const endValue = isMobile ? "120% 50%" : "bottom top";
+		const endValue = isMobile ? "100% top" : "bottom top";
+		const opacity = isMobile ? 0 : 1;
 
 		const tl = gsap.timeline({
 			scrollTrigger: {
@@ -57,6 +58,7 @@ const Hero = () => {
 		videoRef.current.onloadedmetadata = () => {
 			tl.to(videoRef.current, {
 				currentTime: videoRef.current.duration,
+				opacity: opacity,
 			});
 		};
 	}, []);
