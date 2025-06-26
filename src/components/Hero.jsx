@@ -44,7 +44,7 @@ const Hero = () => {
 
 		const startValue = isMobile ? "top 50%" : "center 60%";
 		const endValue = isMobile ? "100% top" : "bottom top";
-		const opacity = isMobile ? 0 : 1;
+		const opacity = isMobile ? 0.1 : 1;
 
 		const tl = gsap.timeline({
 			scrollTrigger: {
